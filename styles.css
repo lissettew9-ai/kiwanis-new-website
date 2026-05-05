@@ -819,6 +819,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ===== ADDED STYLES ===== */
+
 /* Header Logo Image */
 .header-logo-img {
     height: 70px;
@@ -827,10 +829,6 @@ footer {
 }
 
 /* Hero overlay for readability over photo */
-.hero {
-    position: relative;
-}
-
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -867,28 +865,7 @@ footer {
     transform: scale(1.04);
 }
 
-/* Club Family Section */
-.club-family {
-    margin-top: 5rem;
-    text-align: center;
-    padding: 3rem 0 1rem;
-    border-top: 2px solid var(--border-light);
-}
-
-.club-family h3 {
-    font-family: 'Merriweather', serif;
-    font-size: 2rem;
-    color: var(--primary-blue);
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-}
-
-.club-family > p {
-    color: var(--medium-gray);
-    font-size: 1.05rem;
-    margin-bottom: 2.5rem;
-}
-
+/* Club Family Logos */
 .club-logos {
     display: flex;
     justify-content: center;
@@ -920,37 +897,27 @@ footer {
     width: auto;
     margin-bottom: 1.25rem;
     display: block;
-    /* Make it visible on dark background */
     filter: brightness(0) invert(1);
-}
-
-@media (max-width: 768px) {
-    .club-logos {
-        gap: 2rem;
-    }
-    .club-logo-item img {
-        height: 65px;
-    }
-    .header-logo-img {
-        height: 50px;
-    }
 }
 
 /* ===== PROGRAMS PAGE ===== */
 
-/* Active nav link */
 nav a.nav-active {
     color: var(--primary-blue);
     border-bottom: 2px solid var(--primary-blue);
     padding-bottom: 2px;
 }
 
-/* Programs Hero */
 .programs-hero {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
     color: var(--white);
     padding: 5rem 3rem 4rem;
     text-align: center;
+}
+
+.programs-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .programs-hero-eyebrow {
@@ -978,7 +945,6 @@ nav a.nav-active {
     line-height: 1.8;
 }
 
-/* Program Detail Sections */
 .program-detail {
     padding: 5rem 3rem;
     background: var(--white);
@@ -1066,7 +1032,6 @@ nav a.nav-active {
     object-fit: cover;
 }
 
-/* Scholarship / Fair placeholder when no photo */
 .scholarship-placeholder {
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     display: flex;
@@ -1099,7 +1064,6 @@ nav a.nav-active {
     opacity: 0.95;
 }
 
-/* Pancakes logo treatment */
 .pancakes-img-wrap {
     background: #111;
     display: flex;
@@ -1115,7 +1079,6 @@ nav a.nav-active {
     object-fit: contain !important;
 }
 
-/* Kiwanis Family on programs page */
 .kiwanis-family-section {
     padding: 5rem 3rem;
     background: var(--white);
@@ -1127,21 +1090,17 @@ nav a.nav-active {
     margin-bottom: 3rem;
 }
 
-/* Responsive programs page */
 @media (max-width: 1024px) {
     .program-detail-container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-
     .program-detail-alt .program-detail-image {
         order: -1;
     }
-
     .program-detail-image {
         height: 320px;
     }
-
     .programs-hero h1 {
         font-size: 2.5rem;
     }
@@ -1151,25 +1110,29 @@ nav a.nav-active {
     .programs-hero {
         padding: 3.5rem 1.5rem 3rem;
     }
-
     .programs-hero h1 {
         font-size: 2rem;
     }
-
     .program-detail {
         padding: 3.5rem 1.5rem;
     }
-
     .program-detail-content h2 {
         font-size: 1.9rem;
     }
-
     .program-detail-cta {
         flex-direction: column;
     }
-
     .program-detail-cta .btn,
     .program-detail-cta .btn-outline {
         text-align: center;
+    }
+    .club-logos {
+        gap: 2rem;
+    }
+    .club-logo-item img {
+        height: 65px;
+    }
+    .header-logo-img {
+        height: 50px;
     }
 }
